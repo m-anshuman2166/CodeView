@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void configCodeView() {
         codeView = findViewById(R.id.codeView);
-
+        codeView.setTextHighlighted("public class Main() {\n\n\tpublic static void main(String[] args){\n\t\tSystem.out.println(\"Lmao!\");\n\t}\n}");
+        codeView.addErrorLine(4, android.graphics.Color.parseColor("#fc030b"));
         // Change default font to JetBrains Mono font
         Typeface jetBrainsMono = ResourcesCompat.getFont(this, R.font.jetbrains_mono_medium);
         codeView.setTypeface(jetBrainsMono);
